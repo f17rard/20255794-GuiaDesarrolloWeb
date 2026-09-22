@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&display=swap');
+
+:root {
+	--color-primary: #4C1012;
+	--color-secondary: #932C2D;
+	--color-accent: #DCA34A;
+	--color-border-text: #D6D0CE;
+	--color-background: #E4D9D2;
+
+	--font-display: "Bebas Neue", sans-serif;
+	--font-body: "Nunito", sans-serif;
+	--font-serif: "Roboto Slab", serif;
+
+	--text-body: 1rem;
+	--text-body-large: 1.25rem;
+	--text-heading-small: 2.25rem;
+	--text-heading: 3rem;
+	--text-heading-large: 3.5rem;
+	--text-display: 3.8125rem;
+
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-bold: 700;
+	--font-weight-extra-bold: 800;
+
+	--spacing-unit: 0.25rem;
+	--page-max-width: 75rem;
+	--section-gap: 5rem;
+
+	--radius-buttons: 0.75rem;
+	--radius-cards: 1rem;
+	--radius-feature-panels: 1.5rem;
+
+	--fondo-principal: var(--color-background);
+	--fondo-secundario: var(--color-primary);
+	--fondo-panel: var(--color-secondary);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+header{
+    background-image: url(img-bio/fondo-bio.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 120px 20px 70px;
+}
+
+html {
+	box-sizing: border-box;
+	min-width: 20rem;
+	scroll-behavior: smooth;
+	background-color: var(--fondo-principal);
+	color: var(--color-border-text);
+	font-family: var(--font-body);
+	font-size: 100%;
+}
+
+body {
+	box-sizing: inherit;
+	min-width: inherit;
+	min-height: 100vh;
+	margin: 0;
+	overflow-x: hidden;
+	background-color: var(--fondo-principal);
+	color: var(--color-border-text);
+	font-family: var(--font-body);
+	font-size: var(--text-body);
+	font-weight: var(--font-weight-regular);
+	line-height: 1.5;
+	letter-spacing: 0.013em;
+}
+
+.wrapper{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.barra-nav {
+	background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+}
+
+header {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 38rem;
+	padding: 7.5rem 1.25rem 4.375rem;
+	background-position: center 76%;
+	background-attachment: fixed;
+	text-align: center;
+}
+
+header::before {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(180deg, rgba(76, 16, 18, 0.2), rgba(76, 16, 18, 0.78));
+	content: "";
+}
+
+header h1,
+header p {
+	position: relative;
+	z-index: 1;
+	margin: 0;
+}
+
+header h1 {
+	max-width: 50rem;
+	color: var(--color-border-text);
+	font-family: var(--font-display);
+	font-size: var(--text-display);
+	font-weight: var(--font-weight-regular);
+	line-height: 0.9;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+header p {
+	margin-top: 1rem;
+	color: var(--color-border-text);
+	font-size: var(--text-body-large);
+	font-weight: var(--font-weight-bold);
+    font-style: italic;
+    font-size: 16px;
+}
+
+.wrapper {
+	width: 90%;
+	max-width: var(--page-max-width);
+	margin: 0 auto;
+	padding: 5rem 0 6rem;
+}
+
+.barra-nav {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	justify-content: center;
+	padding: 1rem;
+	border-bottom: 2px solid var(--color-accent);
+	background-color: var(--color-background);
+}
+
+.barra-nav div {
+	display: flex;
+}
+
+.barra-nav a {
+	padding: 0.625rem 1rem;
+	border: 1px solid transparent;
+	border-radius: var(--radius-buttons);
+	color: var(--color-primary);
+	font-weight: var(--font-weight-bold);
+	text-decoration: none;
+	transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.barra-nav a:hover,
+.barra-nav a:focus-visible {
+	border-color: var(--color-accent);
+	background-color: var(--color-primary);
+	color: var(--color-background);
+	outline: none;
+}
+
+main section {
+	margin-bottom: var(--section-gap);
+	scroll-margin-top: 5rem;
+}
+
+#datos-personales > h2,
+#historia > h2,
+#estudios > h2 {
+	margin: 0 0 2rem;
+	color: var(--color-background);
+	font-family: var(--font-display);
+	font-size: var(--text-heading);
+	font-weight: var(--font-weight-regular);
+	line-height: 0.95;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+#datos-personales,
+#historia,
+#estudios {
+	padding: 3rem;
+	border: 2px solid var(--color-accent);
+	border-radius: var(--radius-feature-panels);
+	background-color: var(--fondo-panel);
+}
+
+#datos-personales figure {
+	margin: 0 0 2rem;
+}
+
+#datos-personales img {
+	display: block;
+	width: 100%;
+	max-width: 24rem;
+	min-height: 12rem;
+	border-radius: var(--radius-cards);
+	background-color: var(--color-accent);
+	object-fit: cover;
+}
+
+figcaption {
+	margin-top: 0.75rem;
+	color: var(--color-border-text);
+}
+
+dl {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem 1.5rem;
+	margin: 0;
+}
+
+dt {
+	width: 30%;
+	border-left: 4px solid var(--color-accent);
+	color: var(--color-border-text);
+	padding-left: 0.5rem;
+	font-weight: var(--font-weight-bold);
+}
+
+dd {
+	width: 60%;
+	margin: 0;
+	color: var(--color-border-text);
+}
+
+#historia p,
+#estudios p {
+	max-width: 72ch;
+	color: var(--color-border-text);
+}
+
+#estudios article + article {
+	margin-top: 2rem;
+	padding-top: 2rem;
+	border-top: 2px solid var(--color-accent);
+}
+
+#estudios h3 {
+	margin: 0;
+	color: var(--color-border-text);
+	font-family: var(--font-serif);
+	font-size: 1.25rem;
+}
+
+#intereses {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25rem;
+}
+
+#intereses > h2 {
+	width: 100%;
+	margin-bottom: 0.75rem;
+}
+
+#intereses > h2,
+#galeria > h2 {
+	color: var(--color-primary);
+	font-family: var(--font-display);
+}
+
+#intereses > div {
+	position: relative;
+	display: flex;
+	flex: 1 1 30%;
+	min-width: 15rem;
+	min-height: 23rem;
+	overflow: hidden;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 1.5rem;
+	border-radius: var(--radius-feature-panels);
+	background-color: var(--color-primary);
+	background-image: linear-gradient(180deg, transparent 28%, rgba(76, 16, 18, 0.92) 78%), url("img-bio/fondo-bio.jpeg");
+	background-position: center;
+	background-size: cover;
+	transition: transform 220ms ease;
+}
+
+#intereses > div:nth-of-type(2) {
+	background-position: 35% center;
+}
+
+#intereses > div:nth-of-type(1) {
+	background-image: linear-gradient(180deg, transparent 28%, rgba(76, 16, 18, 0.92) 78%), url("img-bio/Esen-music.jpeg");
+	background-position: center 10%;
+}
+
+#intereses > div:nth-of-type(3) {
+	background-position: 70% center;
+	background-image: linear-gradient(180deg, transparent 28%, rgba(76, 16, 18, 0.92) 78%), url("img-bio/Ejercicios-de-pesas.jpeg");
+}
+
+#intereses > div:hover,
+#intereses > div:focus-within {
+	transform: translateY(-0.5rem);
+}
+
+#intereses h3,
+#intereses p {
+	position: relative;
+	z-index: 1;
+}
+
+#intereses h3 {
+	margin: 0;
+	color: var(--color-background);
+	font-family: var(--font-display);
+	font-size: 2rem;
+	font-weight: var(--font-weight-regular);
+	line-height: 1;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+#intereses p {
+	max-height: 0;
+	margin: 0;
+	overflow: hidden;
+	color: var(--color-border-text);
+	opacity: 0;
+	transform: translateY(1rem);
+	transition: max-height 300ms ease, margin 300ms ease, opacity 300ms ease, transform 300ms ease;
+}
+
+#intereses > div:hover p,
+#intereses > div:focus-within p {
+	max-height: 12rem;
+	margin-top: 0.75rem;
+	opacity: 1;
+	transform: translateY(0);
+}
+
+#galeria {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25rem;
+}
+
+#galeria > h2 {
+	width: 100%;
+}
+
+#galeria figure {
+	flex: 1 1 40%;
+	min-height: 14rem;
+	margin: 0;
+	padding: 1rem;
+	border: 2px dashed var(--color-accent);
+	border-radius: var(--radius-cards);
+	background-color: var(--color-background);
+}
+
+#galeria img {
+	display: block;
+	width: 100%;
+	min-height: 10rem;
+	border-radius: 0.5rem;
+	background-color: var(--color-primary);
+	object-fit: cover;
+}
+
+footer {
+	padding: 3rem 1.25rem;
+	background-color: var(--color-secondary);
+	color: var(--color-background);
+	text-align: center;
+}
+
+footer p {
+	margin: 0;
+}
