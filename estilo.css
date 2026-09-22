@@ -93,8 +93,8 @@ h1 {
 
 .guide-group + .guide-group {
     border-top: 12px solid var(--ink);
-    margin-top: 180px;
-    padding-top: 96px;
+    margin-top: 112px;
+    padding-top: 72px;
 }
 
 .guide-heading {
@@ -237,8 +237,8 @@ h2 {
     }
 
     .guide-group + .guide-group {
-        margin-top: 100px;
-        padding-top: 64px;
+        margin-top: 72px;
+        padding-top: 48px;
     }
 
     .section-heading {
