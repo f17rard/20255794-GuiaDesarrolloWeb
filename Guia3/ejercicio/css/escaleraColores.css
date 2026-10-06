@@ -1,0 +1,39 @@
+#diez_de_diamantes,
+#sota_de_diamantes,
+#reina_de_diamantes,
+#rey_de_diamantes,
+#as_de_diamantes {
+  position: absolute;
+}
+
+/* mientras mas alto el z-index, mas cerca del usuario queda la carta.
+   aqui crece de la primera a la ultima, por eso el as queda adelante */
+#diez_de_diamantes {
+  top: 100px;
+  left: 80px;
+  z-index: 1;
+}
+
+#sota_de_diamantes {
+  top: 115px;
+  left: 95px;
+  z-index: 2;
+}
+
+#reina_de_diamantes {
+  top: 130px;
+  left: 110px;
+  z-index: 3;
+}
+
+#rey_de_diamantes {
+  top: 145px;
+  left: 125px;
+  z-index: 4;
+}
+
+#as_de_diamantes {
+  top: 160px;
+  left: 140px;
+  z-index: 5;
+}
