@@ -1,12 +1,12 @@
 :root {
-    --ink: #18251f;
-    --muted: #65736d;
-    --paper: #e7ebe4;
-    --card: #f8faf6;
+    --ink: #1f1e33;
+    --muted: #686779;
+    --paper: #e9e9f2;
+    --card: #f7f7fb;
     --accent: #d6a83f;
     --accent-dark: #866515;
-    --line: #c1cbc1;
-    --shadow: 0 12px 24px rgba(24, 37, 31, 0.18);
+    --line: #c7c6d7;
+    --shadow: 0 12px 24px rgba(31, 30, 51, 0.18);
 }
 
 * {
@@ -73,7 +73,7 @@ h1 {
 }
 
 .hero__description {
-    color: #c8c4bb;
+    color: #d0cfdf;
     font-family: Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.6;
@@ -156,7 +156,7 @@ h2 {
 
 .project-card--featured {
     background: var(--ink);
-    border-color: #34483d;
+    border-color: #41405c;
     color: var(--paper);
 }
 
@@ -189,7 +189,7 @@ h2 {
 }
 
 .project-card--featured p {
-    color: #c8c4bb;
+    color: #d0cfdf;
 }
 
 .card-link {
@@ -261,4 +261,36 @@ h2 {
         grid-row: 3;
         margin-top: 12px;
     }
+}
+.guide-group:nth-child(odd) .project-card {
+    background: var(--card);
+    border-color: var(--line);
+    color: var(--ink);
+}
+
+.guide-group:nth-child(odd) .project-card p {
+    color: var(--muted);
+}
+
+.guide-group:nth-child(odd) .project-card .card-link {
+    color: var(--accent-dark);
+}
+
+.guide-group:nth-child(even) .project-card {
+    background: var(--ink);
+    border-color: #41405c;
+    color: var(--paper);
+}
+
+.guide-group:nth-child(even) .project-card p {
+    color: #d0cfdf;
+}
+
+.guide-group:nth-child(even) .project-card .card-link {
+    color: #f0a17f;
+}
+
+.guide-group .project-card:hover,
+.guide-group .project-card:focus-visible {
+    border-color: var(--accent);
 }

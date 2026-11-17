@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos gratuitos | FreeToGame</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <p class="subtitulo">FreeToGame · Ejercicio de API</p>
+            <h1>Juegos gratuitos</h1>
+            <p>Explora juegos MMORPG para navegador y consulta sus detalles.</p>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <div class="acceso">
+            <button type="button" id="btnCargar">Actualizar juegos</button>
+        </div>
+
+        <section aria-labelledby="tituloListado">
+            <h2 id="tituloListado">Listado de juegos</h2>
+            <p id="estadoListado" role="status">Cargando juegos…</p>
+            <div id="listaJuegos" class="lista"></div>
+        </section>
+    </main>
+
+    <dialog id="panelDetalle" class="panel" aria-labelledby="tituloDetalle">
+        <div class="cabecera-detalle">
+                <h2 id="tituloDetalle">Detalles del juego</h2>
+            <form method="dialog">
+                <button type="submit">Cerrar</button>
+            </form>
+        </div>
+        <p id="estadoDetalle" role="status"></p>
+        <div id="detalleJuego"></div>
+    </dialog>
+
+    <footer class="contenedor">
+        <p>Datos proporcionados por <a href="https://www.freetogame.com/" target="_blank" rel="noopener noreferrer">FreeToGame</a>, mediante RapidAPI.</p>
+    </footer>
+</body>
+</html>
